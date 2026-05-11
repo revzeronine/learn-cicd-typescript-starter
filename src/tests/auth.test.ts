@@ -33,7 +33,7 @@ describe("API Key", () => {
 
   test("Get null when authorization header is malformed", () => {
     const header: IncomingHttpHeaders = {
-      "authorization": "ApiKey 123445"
+      "authorization": "SomeApiKey 123445"
     }
     expect(getAPIKey(header)).toBe(null);
   })
